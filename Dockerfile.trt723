@@ -1,0 +1,58 @@
+# Base image with CUDA 11.1 and cuDNN 8 (Compatible with TensorRT 7.2.3)
+FROM nvidia/cuda:11.1.1-cudnn8-devel-ubuntu18.04
+
+# Set environment variables
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TRT_VERSION=7.2.3.4
+ENV CUDA_VERSION=11.1
+
+# Install basic dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    python3 \
+    python3-pip \
+    python3-dev \
+    git \
+    wget \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+# Link python3 to python
+RUN ln -s /usr/bin/python3 /usr/bin/python
+
+# Upgrade pip and install setuptools
+RUN pip3 install --upgrade pip setuptools
+
+# Install Python scientific stack
+# Note: For TensorRT 7.2.3 with CUDA 11.1, use pycuda instead of cuda-python
+# pycuda provides all necessary CUDA Python bindings for this TensorRT version
+RUN pip3 install numpy protobuf onnx pycuda torch torchvision scipy ml_collections
+
+# Instructions for TensorRT installation:
+# Method 1: Automatic installation via repo (if specific version is available in public repo)
+# Note: Specific old versions might be hard to find in public repos without specific cuda-keyring.
+# Method 2: Local installation (Recommended for specific TensorRT versions)
+# Copy the local TensorRT tar package into the image.
+# You need to download TensorRT-7.2.3.4.Ubuntu-18.04.x86_64-gnu.cuda-11.1.cudnn8.1.tar.gz from NVIDIA website first.
+
+# Create a directory for TensorRT
+WORKDIR /opt
+
+# Uncomment the following lines if you have the tar file in the same directory as Dockerfile
+COPY TensorRT-7.2.3.4.Ubuntu-18.04.x86_64-gnu.cuda-11.1.cudnn8.1.tar.gz .
+RUN tar -xzvf TensorRT-7.2.3.4.Ubuntu-18.04.x86_64-gnu.cuda-11.1.cudnn8.1.tar.gz && \
+    rm TensorRT-7.2.3.4.Ubuntu-18.04.x86_64-gnu.cuda-11.1.cudnn8.1.tar.gz
+
+# Setup Environment variables for TensorRT (Adjust path if needed)
+ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/TensorRT-7.2.3.4/lib
+ENV PATH=$PATH:/opt/TensorRT-7.2.3.4/bin
+ENV CPLUS_INCLUDE_PATH=/opt/TensorRT-7.2.3.4/include
+ENV LIBRARY_PATH=/opt/TensorRT-7.2.3.4/lib
+ENV TRT_ROOT=/opt/TensorRT-7.2.3.4
+
+# Install Python bindings
+RUN cd TensorRT-7.2.3.4/python && pip3 install tensorrt-*-cp36-none-linux_x86_64.whl
+RUN cd TensorRT-7.2.3.4/uff && pip3 install uff-*.whl
+RUN cd TensorRT-7.2.3.4/graphsurgeon && pip3 install graphsurgeon-*.whl
+
+WORKDIR /workspace
+CMD ["/bin/bash"]

@@ -1,0 +1,291 @@
+[
+  { "count" : 1001 }
+, { "name" : "1_nn.Conv2d", "timeMs" : 605.194, "averageMs" : 0.604589, "percentage" : 19.2486 }
+, { "name" : "2_trt.Shuffle", "timeMs" : 7.53295, "averageMs" : 0.00752543, "percentage" : 0.239591 }
+, { "name" : "3_trt.Constant", "timeMs" : 2.12462, "averageMs" : 0.0021225, "percentage" : 0.0675749 }
+, { "name" : "(Unnamed Layer* 2) [Constant]_output copy", "timeMs" : 5.13032, "averageMs" : 0.0051252, "percentage" : 0.163173 }
+, { "name" : "(Unnamed Layer* 1) [Shuffle]_output copy", "timeMs" : 6.77013, "averageMs" : 0.00676336, "percentage" : 0.215328 }
+, { "name" : "5_trt.Constant", "timeMs" : 2.23012, "averageMs" : 0.00222789, "percentage" : 0.0709305 }
+, { "name" : "6_elementwise.sum", "timeMs" : 5.4932, "averageMs" : 0.00548771, "percentage" : 0.174715 }
+, { "name" : "model.transformer.encoder.layer.0.attention_norm._gamma", "timeMs" : 2.06167, "averageMs" : 0.00205961, "percentage" : 0.0655729 }
+, { "name" : "model.transformer.encoder.layer.0.attention_norm._beta", "timeMs" : 1.92651, "averageMs" : 0.00192458, "percentage" : 0.0612738 }
+, { "name" : "model.transformer.encoder.layer.0.attention_norm.", "timeMs" : 8.22837, "averageMs" : 0.00822015, "percentage" : 0.261709 }
+, { "name" : "19_nn.Linear || 11_nn.Linear || 15_nn.Linear", "timeMs" : 16.5049, "averageMs" : 0.0164884, "percentage" : 0.524949 }
+, { "name" : "20_nn.Linear_after_reshape", "timeMs" : 6.08955, "averageMs" : 0.00608346, "percentage" : 0.193682 }
+, { "name" : "21_trt.Shuffle.att_v_view_and transpose", "timeMs" : 5.98058, "averageMs" : 0.00597461, "percentage" : 0.190216 }
+, { "name" : "12_nn.Linear_after_reshape", "timeMs" : 5.87891, "averageMs" : 0.00587304, "percentage" : 0.186983 }
+, { "name" : "13_trt.Shuffle.att_q_view_transpose", "timeMs" : 5.82764, "averageMs" : 0.00582182, "percentage" : 0.185352 }
+, { "name" : "16_nn.Linear_after_reshape", "timeMs" : 5.9411, "averageMs" : 0.00593516, "percentage" : 0.188961 }
+, { "name" : "17_trt.Shuffle.att_k_view_and transpose", "timeMs" : 7.2617, "averageMs" : 0.00725444, "percentage" : 0.230963 }
+, { "name" : "22_torch.matmul.q_mul_k", "timeMs" : 14.1502, "averageMs" : 0.014136, "percentage" : 0.450056 }
+, { "name" : "24_nn.Softmax[dim=4]", "timeMs" : 12.0794, "averageMs" : 0.0120673, "percentage" : 0.384194 }
+, { "name" : "25_torch.matmul.matmul(p_attn, value)", "timeMs" : 17.7971, "averageMs" : 0.0177794, "percentage" : 0.56605 }
+, { "name" : "26_trt.Shuffle.attn_transpose_and_reshape", "timeMs" : 5.8024, "averageMs" : 0.00579661, "percentage" : 0.184549 }
+, { "name" : "28_nn.Linear", "timeMs" : 12.2712, "averageMs" : 0.012259, "percentage" : 0.390295 }
+, { "name" : "30_elementwise.sum", "timeMs" : 5.78679, "averageMs" : 0.00578101, "percentage" : 0.184053 }
+, { "name" : "model.transformer.encoder.layer.0.ffn_norm._gamma", "timeMs" : 1.9707, "averageMs" : 0.00196873, "percentage" : 0.0626793 }
+, { "name" : "model.transformer.encoder.layer.0.ffn_norm._beta", "timeMs" : 1.93639, "averageMs" : 0.00193446, "percentage" : 0.0615883 }
+, { "name" : "model.transformer.encoder.layer.0.ffn_norm.", "timeMs" : 8.29259, "averageMs" : 0.00828431, "percentage" : 0.263751 }
+, { "name" : "35_nn.Linear", "timeMs" : 24.0018, "averageMs" : 0.0239778, "percentage" : 0.763394 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 36) [Constant], (Unnamed Layer* 41) [ElementWise]), PWN((Unnamed Layer* 37) [Constant], (Unnamed Layer* 42) [ElementWise])), (Unnamed Layer* 43) [ElementWise]), PWN((Unnamed Layer* 38) [Constant], (Unnamed Layer* 44) [ElementWise])), (Unnamed Layer* 45) [Activation]), PWN((Unnamed Layer* 39) [Constant], (Unnamed Layer* 46) [ElementWise])), PWN((Unnamed Layer* 40) [Constant], (Unnamed Layer* 47) [ElementWise])), 49_nn.GELU)", "timeMs" : 6.98784, "averageMs" : 0.00698086, "percentage" : 0.222253 }
+, { "name" : "51_nn.Linear", "timeMs" : 25.2941, "averageMs" : 0.0252688, "percentage" : 0.804495 }
+, { "name" : "53_elementwise.sum", "timeMs" : 6.18664, "averageMs" : 0.00618046, "percentage" : 0.19677 }
+, { "name" : "model.transformer.encoder.layer.1.attention_norm._gamma", "timeMs" : 1.97383, "averageMs" : 0.00197186, "percentage" : 0.0627791 }
+, { "name" : "model.transformer.encoder.layer.1.attention_norm._beta", "timeMs" : 1.89953, "averageMs" : 0.00189763, "percentage" : 0.0604158 }
+, { "name" : "model.transformer.encoder.layer.1.attention_norm.", "timeMs" : 8.04747, "averageMs" : 0.00803943, "percentage" : 0.255955 }
+, { "name" : "66_nn.Linear || 58_nn.Linear || 62_nn.Linear", "timeMs" : 17.6679, "averageMs" : 0.0176502, "percentage" : 0.561939 }
+, { "name" : "67_nn.Linear_after_reshape", "timeMs" : 6.08338, "averageMs" : 0.0060773, "percentage" : 0.193486 }
+, { "name" : "68_trt.Shuffle.att_v_view_and transpose", "timeMs" : 5.88701, "averageMs" : 0.00588113, "percentage" : 0.18724 }
+, { "name" : "59_nn.Linear_after_reshape", "timeMs" : 5.88055, "averageMs" : 0.00587467, "percentage" : 0.187035 }
+, { "name" : "60_trt.Shuffle.att_q_view_transpose", "timeMs" : 5.84961, "averageMs" : 0.00584377, "percentage" : 0.186051 }
+, { "name" : "63_nn.Linear_after_reshape", "timeMs" : 5.8496, "averageMs" : 0.00584375, "percentage" : 0.18605 }
+, { "name" : "64_trt.Shuffle.att_k_view_and transpose", "timeMs" : 7.30733, "averageMs" : 0.00730003, "percentage" : 0.232414 }
+, { "name" : "69_torch.matmul.q_mul_k", "timeMs" : 13.6193, "averageMs" : 0.0136057, "percentage" : 0.433172 }
+, { "name" : "71_nn.Softmax[dim=4]", "timeMs" : 12.0295, "averageMs" : 0.0120175, "percentage" : 0.382608 }
+, { "name" : "72_torch.matmul.matmul(p_attn, value)", "timeMs" : 17.4964, "averageMs" : 0.0174789, "percentage" : 0.556484 }
+, { "name" : "73_trt.Shuffle.attn_transpose_and_reshape", "timeMs" : 5.81044, "averageMs" : 0.00580463, "percentage" : 0.184805 }
+, { "name" : "75_nn.Linear", "timeMs" : 12.223, "averageMs" : 0.0122108, "percentage" : 0.388761 }
+, { "name" : "77_elementwise.sum", "timeMs" : 5.79991, "averageMs" : 0.00579411, "percentage" : 0.18447 }
+, { "name" : "model.transformer.encoder.layer.1.ffn_norm._gamma", "timeMs" : 1.98699, "averageMs" : 0.001985, "percentage" : 0.0631974 }
+, { "name" : "model.transformer.encoder.layer.1.ffn_norm._beta", "timeMs" : 1.95687, "averageMs" : 0.00195492, "percentage" : 0.0622397 }
+, { "name" : "model.transformer.encoder.layer.1.ffn_norm.", "timeMs" : 8.19077, "averageMs" : 0.00818258, "percentage" : 0.260513 }
+, { "name" : "82_nn.Linear", "timeMs" : 24.024, "averageMs" : 0.024, "percentage" : 0.764099 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 83) [Constant], (Unnamed Layer* 88) [ElementWise]), PWN((Unnamed Layer* 84) [Constant], (Unnamed Layer* 89) [ElementWise])), (Unnamed Layer* 90) [ElementWise]), PWN((Unnamed Layer* 85) [Constant], (Unnamed Layer* 91) [ElementWise])), (Unnamed Layer* 92) [Activation]), PWN((Unnamed Layer* 86) [Constant], (Unnamed Layer* 93) [ElementWise])), PWN((Unnamed Layer* 87) [Constant], (Unnamed Layer* 94) [ElementWise])), 96_nn.GELU)", "timeMs" : 7.0073, "averageMs" : 0.0070003, "percentage" : 0.222872 }
+, { "name" : "98_nn.Linear", "timeMs" : 24.1384, "averageMs" : 0.0241143, "percentage" : 0.767738 }
+, { "name" : "100_elementwise.sum", "timeMs" : 6.02421, "averageMs" : 0.00601819, "percentage" : 0.191604 }
+, { "name" : "model.transformer.encoder.layer.2.attention_norm._gamma", "timeMs" : 2.06887, "averageMs" : 0.00206681, "percentage" : 0.0658019 }
+, { "name" : "model.transformer.encoder.layer.2.attention_norm._beta", "timeMs" : 1.87905, "averageMs" : 0.00187717, "percentage" : 0.0597644 }
+, { "name" : "model.transformer.encoder.layer.2.attention_norm.", "timeMs" : 8.1949, "averageMs" : 0.00818672, "percentage" : 0.260644 }
+, { "name" : "113_nn.Linear || 105_nn.Linear || 109_nn.Linear", "timeMs" : 16.4228, "averageMs" : 0.0164064, "percentage" : 0.522337 }
+, { "name" : "114_nn.Linear_after_reshape", "timeMs" : 6.04069, "averageMs" : 0.00603465, "percentage" : 0.192128 }
+, { "name" : "115_trt.Shuffle.att_v_view_and transpose", "timeMs" : 5.9138, "averageMs" : 0.00590789, "percentage" : 0.188092 }
+, { "name" : "106_nn.Linear_after_reshape", "timeMs" : 5.84797, "averageMs" : 0.00584213, "percentage" : 0.185998 }
+, { "name" : "107_trt.Shuffle.att_q_view_transpose", "timeMs" : 5.78755, "averageMs" : 0.00578177, "percentage" : 0.184077 }
+, { "name" : "110_nn.Linear_after_reshape", "timeMs" : 5.94445, "averageMs" : 0.00593851, "percentage" : 0.189067 }
+, { "name" : "111_trt.Shuffle.att_k_view_and transpose", "timeMs" : 7.17091, "averageMs" : 0.00716375, "percentage" : 0.228076 }
+, { "name" : "116_torch.matmul.q_mul_k", "timeMs" : 13.5687, "averageMs" : 0.0135552, "percentage" : 0.431562 }
+, { "name" : "118_nn.Softmax[dim=4]", "timeMs" : 12.0313, "averageMs" : 0.0120193, "percentage" : 0.382663 }
+, { "name" : "119_torch.matmul.matmul(p_attn, value)", "timeMs" : 17.5713, "averageMs" : 0.0175537, "percentage" : 0.558866 }
+, { "name" : "120_trt.Shuffle.attn_transpose_and_reshape", "timeMs" : 5.77613, "averageMs" : 0.00577036, "percentage" : 0.183714 }
+, { "name" : "122_nn.Linear", "timeMs" : 12.1387, "averageMs" : 0.0121266, "percentage" : 0.386079 }
+, { "name" : "124_elementwise.sum", "timeMs" : 5.7632, "averageMs" : 0.00575744, "percentage" : 0.183302 }
+, { "name" : "model.transformer.encoder.layer.2.ffn_norm._gamma", "timeMs" : 3.13569, "averageMs" : 0.00313256, "percentage" : 0.0997327 }
+, { "name" : "model.transformer.encoder.layer.2.ffn_norm._beta", "timeMs" : 1.96807, "averageMs" : 0.00196611, "percentage" : 0.0625959 }
+, { "name" : "model.transformer.encoder.layer.2.ffn_norm.", "timeMs" : 8.27336, "averageMs" : 0.00826509, "percentage" : 0.26314 }
+, { "name" : "129_nn.Linear", "timeMs" : 24.0817, "averageMs" : 0.0240576, "percentage" : 0.765934 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 130) [Constant], (Unnamed Layer* 135) [ElementWise]), PWN((Unnamed Layer* 131) [Constant], (Unnamed Layer* 136) [ElementWise])), (Unnamed Layer* 137) [ElementWise]), PWN((Unnamed Layer* 132) [Constant], (Unnamed Layer* 138) [ElementWise])), (Unnamed Layer* 139) [Activation]), PWN((Unnamed Layer* 133) [Constant], (Unnamed Layer* 140) [ElementWise])), PWN((Unnamed Layer* 134) [Constant], (Unnamed Layer* 141) [ElementWise])), 143_nn.GELU)", "timeMs" : 6.99418, "averageMs" : 0.00698719, "percentage" : 0.222455 }
+, { "name" : "145_nn.Linear", "timeMs" : 24.864, "averageMs" : 0.0248392, "percentage" : 0.790817 }
+, { "name" : "147_elementwise.sum", "timeMs" : 6.07134, "averageMs" : 0.00606528, "percentage" : 0.193103 }
+, { "name" : "model.transformer.encoder.layer.3.attention_norm._gamma", "timeMs" : 2.00065, "averageMs" : 0.00199865, "percentage" : 0.063632 }
+, { "name" : "model.transformer.encoder.layer.3.attention_norm._beta", "timeMs" : 1.91182, "averageMs" : 0.00190991, "percentage" : 0.0608066 }
+, { "name" : "model.transformer.encoder.layer.3.attention_norm.", "timeMs" : 8.14606, "averageMs" : 0.00813793, "percentage" : 0.259091 }
+, { "name" : "160_nn.Linear || 152_nn.Linear || 156_nn.Linear", "timeMs" : 16.3387, "averageMs" : 0.0163224, "percentage" : 0.519664 }
+, { "name" : "161_nn.Linear_after_reshape", "timeMs" : 6.06965, "averageMs" : 0.00606358, "percentage" : 0.193049 }
+, { "name" : "162_trt.Shuffle.att_v_view_and transpose", "timeMs" : 5.93204, "averageMs" : 0.00592611, "percentage" : 0.188672 }
+, { "name" : "153_nn.Linear_after_reshape", "timeMs" : 5.89069, "averageMs" : 0.0058848, "percentage" : 0.187357 }
+, { "name" : "154_trt.Shuffle.att_q_view_transpose", "timeMs" : 5.83846, "averageMs" : 0.00583263, "percentage" : 0.185696 }
+, { "name" : "157_nn.Linear_after_reshape", "timeMs" : 5.85085, "averageMs" : 0.005845, "percentage" : 0.18609 }
+, { "name" : "158_trt.Shuffle.att_k_view_and transpose", "timeMs" : 7.35126, "averageMs" : 0.00734391, "percentage" : 0.233812 }
+, { "name" : "163_torch.matmul.q_mul_k", "timeMs" : 15.2439, "averageMs" : 0.0152287, "percentage" : 0.484843 }
+, { "name" : "165_nn.Softmax[dim=4]", "timeMs" : 12.0594, "averageMs" : 0.0120474, "percentage" : 0.383559 }
+, { "name" : "166_torch.matmul.matmul(p_attn, value)", "timeMs" : 17.5234, "averageMs" : 0.0175059, "percentage" : 0.557343 }
+, { "name" : "167_trt.Shuffle.attn_transpose_and_reshape", "timeMs" : 5.76813, "averageMs" : 0.00576237, "percentage" : 0.183459 }
+, { "name" : "169_nn.Linear", "timeMs" : 12.0608, "averageMs" : 0.0120488, "percentage" : 0.383602 }
+, { "name" : "171_elementwise.sum", "timeMs" : 5.79402, "averageMs" : 0.00578823, "percentage" : 0.184283 }
+, { "name" : "model.transformer.encoder.layer.3.ffn_norm._gamma", "timeMs" : 1.96551, "averageMs" : 0.00196355, "percentage" : 0.0625145 }
+, { "name" : "model.transformer.encoder.layer.3.ffn_norm._beta", "timeMs" : 1.99643, "averageMs" : 0.00199443, "percentage" : 0.0634976 }
+, { "name" : "model.transformer.encoder.layer.3.ffn_norm.", "timeMs" : 8.2478, "averageMs" : 0.00823956, "percentage" : 0.262327 }
+, { "name" : "176_nn.Linear", "timeMs" : 23.9686, "averageMs" : 0.0239447, "percentage" : 0.762338 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 177) [Constant], (Unnamed Layer* 182) [ElementWise]), PWN((Unnamed Layer* 178) [Constant], (Unnamed Layer* 183) [ElementWise])), (Unnamed Layer* 184) [ElementWise]), PWN((Unnamed Layer* 179) [Constant], (Unnamed Layer* 185) [ElementWise])), (Unnamed Layer* 186) [Activation]), PWN((Unnamed Layer* 180) [Constant], (Unnamed Layer* 187) [ElementWise])), PWN((Unnamed Layer* 181) [Constant], (Unnamed Layer* 188) [ElementWise])), 190_nn.GELU)", "timeMs" : 7.00605, "averageMs" : 0.00699905, "percentage" : 0.222832 }
+, { "name" : "192_nn.Linear", "timeMs" : 24.5945, "averageMs" : 0.0245699, "percentage" : 0.782243 }
+, { "name" : "194_elementwise.sum", "timeMs" : 5.80029, "averageMs" : 0.0057945, "percentage" : 0.184482 }
+, { "name" : "model.transformer.encoder.layer.4.attention_norm._gamma", "timeMs" : 2.08606, "averageMs" : 0.00208397, "percentage" : 0.0663484 }
+, { "name" : "model.transformer.encoder.layer.4.attention_norm._beta", "timeMs" : 1.88206, "averageMs" : 0.00188018, "percentage" : 0.0598601 }
+, { "name" : "model.transformer.encoder.layer.4.attention_norm.", "timeMs" : 8.24863, "averageMs" : 0.00824039, "percentage" : 0.262353 }
+, { "name" : "207_nn.Linear || 199_nn.Linear || 203_nn.Linear", "timeMs" : 16.376, "averageMs" : 0.0163596, "percentage" : 0.520849 }
+, { "name" : "208_nn.Linear_after_reshape", "timeMs" : 6.11797, "averageMs" : 0.00611186, "percentage" : 0.194586 }
+, { "name" : "209_trt.Shuffle.att_v_view_and transpose", "timeMs" : 5.91357, "averageMs" : 0.00590767, "percentage" : 0.188085 }
+, { "name" : "200_nn.Linear_after_reshape", "timeMs" : 5.89974, "averageMs" : 0.00589385, "percentage" : 0.187645 }
+, { "name" : "201_trt.Shuffle.att_q_view_transpose", "timeMs" : 5.75811, "averageMs" : 0.00575236, "percentage" : 0.183141 }
+, { "name" : "204_nn.Linear_after_reshape", "timeMs" : 5.88947, "averageMs" : 0.00588359, "percentage" : 0.187319 }
+, { "name" : "205_trt.Shuffle.att_k_view_and transpose", "timeMs" : 7.13709, "averageMs" : 0.00712996, "percentage" : 0.227 }
+, { "name" : "210_torch.matmul.q_mul_k", "timeMs" : 13.6392, "averageMs" : 0.0136256, "percentage" : 0.433805 }
+, { "name" : "212_nn.Softmax[dim=4]", "timeMs" : 12.063, "averageMs" : 0.0120509, "percentage" : 0.383672 }
+, { "name" : "213_torch.matmul.matmul(p_attn, value)", "timeMs" : 17.5352, "averageMs" : 0.0175176, "percentage" : 0.557717 }
+, { "name" : "214_trt.Shuffle.attn_transpose_and_reshape", "timeMs" : 5.80903, "averageMs" : 0.00580322, "percentage" : 0.18476 }
+, { "name" : "216_nn.Linear", "timeMs" : 12.1227, "averageMs" : 0.0121106, "percentage" : 0.385571 }
+, { "name" : "218_elementwise.sum", "timeMs" : 5.82967, "averageMs" : 0.00582384, "percentage" : 0.185416 }
+, { "name" : "model.transformer.encoder.layer.4.ffn_norm._gamma", "timeMs" : 1.93681, "averageMs" : 0.00193487, "percentage" : 0.0616015 }
+, { "name" : "model.transformer.encoder.layer.4.ffn_norm._beta", "timeMs" : 1.96446, "averageMs" : 0.0019625, "percentage" : 0.0624809 }
+, { "name" : "model.transformer.encoder.layer.4.ffn_norm.", "timeMs" : 9.84556, "averageMs" : 0.00983572, "percentage" : 0.313145 }
+, { "name" : "223_nn.Linear", "timeMs" : 24.0212, "averageMs" : 0.0239972, "percentage" : 0.764011 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 224) [Constant], (Unnamed Layer* 229) [ElementWise]), PWN((Unnamed Layer* 225) [Constant], (Unnamed Layer* 230) [ElementWise])), (Unnamed Layer* 231) [ElementWise]), PWN((Unnamed Layer* 226) [Constant], (Unnamed Layer* 232) [ElementWise])), (Unnamed Layer* 233) [Activation]), PWN((Unnamed Layer* 227) [Constant], (Unnamed Layer* 234) [ElementWise])), PWN((Unnamed Layer* 228) [Constant], (Unnamed Layer* 235) [ElementWise])), 237_nn.GELU)", "timeMs" : 7.04496, "averageMs" : 0.00703792, "percentage" : 0.224069 }
+, { "name" : "239_nn.Linear", "timeMs" : 24.7869, "averageMs" : 0.0247621, "percentage" : 0.788364 }
+, { "name" : "241_elementwise.sum", "timeMs" : 6.10552, "averageMs" : 0.00609942, "percentage" : 0.19419 }
+, { "name" : "model.transformer.encoder.layer.5.attention_norm._gamma", "timeMs" : 2.00385, "averageMs" : 0.00200185, "percentage" : 0.0637338 }
+, { "name" : "model.transformer.encoder.layer.5.attention_norm._beta", "timeMs" : 1.91387, "averageMs" : 0.00191195, "percentage" : 0.0608718 }
+, { "name" : "model.transformer.encoder.layer.5.attention_norm.", "timeMs" : 8.18088, "averageMs" : 0.00817271, "percentage" : 0.260198 }
+, { "name" : "254_nn.Linear || 246_nn.Linear || 250_nn.Linear", "timeMs" : 16.3278, "averageMs" : 0.0163114, "percentage" : 0.519315 }
+, { "name" : "255_nn.Linear_after_reshape", "timeMs" : 6.08543, "averageMs" : 0.00607935, "percentage" : 0.193551 }
+, { "name" : "256_trt.Shuffle.att_v_view_and transpose", "timeMs" : 5.92456, "averageMs" : 0.00591864, "percentage" : 0.188434 }
+, { "name" : "247_nn.Linear_after_reshape", "timeMs" : 5.86848, "averageMs" : 0.00586262, "percentage" : 0.186651 }
+, { "name" : "248_trt.Shuffle.att_q_view_transpose", "timeMs" : 5.8176, "averageMs" : 0.00581179, "percentage" : 0.185033 }
+, { "name" : "251_nn.Linear_after_reshape", "timeMs" : 5.88656, "averageMs" : 0.00588068, "percentage" : 0.187226 }
+, { "name" : "252_trt.Shuffle.att_k_view_and transpose", "timeMs" : 7.16192, "averageMs" : 0.00715476, "percentage" : 0.227789 }
+, { "name" : "257_torch.matmul.q_mul_k", "timeMs" : 13.473, "averageMs" : 0.0134596, "percentage" : 0.428519 }
+, { "name" : "259_nn.Softmax[dim=4]", "timeMs" : 12.0326, "averageMs" : 0.0120206, "percentage" : 0.382706 }
+, { "name" : "260_torch.matmul.matmul(p_attn, value)", "timeMs" : 17.5557, "averageMs" : 0.0175382, "percentage" : 0.558371 }
+, { "name" : "261_trt.Shuffle.attn_transpose_and_reshape", "timeMs" : 5.77843, "averageMs" : 0.00577266, "percentage" : 0.183787 }
+, { "name" : "263_nn.Linear", "timeMs" : 12.1213, "averageMs" : 0.0121092, "percentage" : 0.385527 }
+, { "name" : "265_elementwise.sum", "timeMs" : 5.85031, "averageMs" : 0.00584447, "percentage" : 0.186073 }
+, { "name" : "model.transformer.encoder.layer.5.ffn_norm._gamma", "timeMs" : 1.9515, "averageMs" : 0.00194955, "percentage" : 0.0620687 }
+, { "name" : "model.transformer.encoder.layer.5.ffn_norm._beta", "timeMs" : 1.9978, "averageMs" : 0.00199581, "percentage" : 0.0635414 }
+, { "name" : "model.transformer.encoder.layer.5.ffn_norm.", "timeMs" : 8.23147, "averageMs" : 0.00822325, "percentage" : 0.261808 }
+, { "name" : "270_nn.Linear", "timeMs" : 24.1163, "averageMs" : 0.0240922, "percentage" : 0.767034 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 271) [Constant], (Unnamed Layer* 276) [ElementWise]), PWN((Unnamed Layer* 272) [Constant], (Unnamed Layer* 277) [ElementWise])), (Unnamed Layer* 278) [ElementWise]), PWN((Unnamed Layer* 273) [Constant], (Unnamed Layer* 279) [ElementWise])), (Unnamed Layer* 280) [Activation]), PWN((Unnamed Layer* 274) [Constant], (Unnamed Layer* 281) [ElementWise])), PWN((Unnamed Layer* 275) [Constant], (Unnamed Layer* 282) [ElementWise])), 284_nn.GELU)", "timeMs" : 6.99476, "averageMs" : 0.00698777, "percentage" : 0.222473 }
+, { "name" : "286_nn.Linear", "timeMs" : 24.8006, "averageMs" : 0.0247759, "percentage" : 0.788801 }
+, { "name" : "288_elementwise.sum", "timeMs" : 6.10718, "averageMs" : 0.00610108, "percentage" : 0.194243 }
+, { "name" : "model.transformer.encoder.layer.6.attention_norm._gamma", "timeMs" : 1.99867, "averageMs" : 0.00199667, "percentage" : 0.0635689 }
+, { "name" : "model.transformer.encoder.layer.6.attention_norm._beta", "timeMs" : 1.8698, "averageMs" : 0.00186793, "percentage" : 0.0594703 }
+, { "name" : "model.transformer.encoder.layer.6.attention_norm.", "timeMs" : 8.15397, "averageMs" : 0.00814583, "percentage" : 0.259343 }
+, { "name" : "301_nn.Linear || 293_nn.Linear || 297_nn.Linear", "timeMs" : 16.242, "averageMs" : 0.0162258, "percentage" : 0.516588 }
+, { "name" : "302_nn.Linear_after_reshape", "timeMs" : 7.17317, "averageMs" : 0.007166, "percentage" : 0.228147 }
+, { "name" : "303_trt.Shuffle.att_v_view_and transpose", "timeMs" : 5.89421, "averageMs" : 0.00588832, "percentage" : 0.187469 }
+, { "name" : "294_nn.Linear_after_reshape", "timeMs" : 5.87959, "averageMs" : 0.00587372, "percentage" : 0.187004 }
+, { "name" : "295_trt.Shuffle.att_q_view_transpose", "timeMs" : 5.79539, "averageMs" : 0.0057896, "percentage" : 0.184326 }
+, { "name" : "298_nn.Linear_after_reshape", "timeMs" : 5.91747, "averageMs" : 0.00591156, "percentage" : 0.188209 }
+, { "name" : "299_trt.Shuffle.att_k_view_and transpose", "timeMs" : 7.14941, "averageMs" : 0.00714226, "percentage" : 0.227392 }
+, { "name" : "304_torch.matmul.q_mul_k", "timeMs" : 13.602, "averageMs" : 0.0135884, "percentage" : 0.432619 }
+, { "name" : "306_nn.Softmax[dim=4]", "timeMs" : 12.0645, "averageMs" : 0.0120525, "percentage" : 0.383721 }
+, { "name" : "307_torch.matmul.matmul(p_attn, value)", "timeMs" : 17.5462, "averageMs" : 0.0175286, "percentage" : 0.558067 }
+, { "name" : "308_trt.Shuffle.attn_transpose_and_reshape", "timeMs" : 5.76992, "averageMs" : 0.00576416, "percentage" : 0.183516 }
+, { "name" : "310_nn.Linear", "timeMs" : 11.9875, "averageMs" : 0.0119755, "percentage" : 0.38127 }
+, { "name" : "312_elementwise.sum", "timeMs" : 5.78816, "averageMs" : 0.00578238, "percentage" : 0.184096 }
+, { "name" : "model.transformer.encoder.layer.6.ffn_norm._gamma", "timeMs" : 2.01371, "averageMs" : 0.00201169, "percentage" : 0.0640472 }
+, { "name" : "model.transformer.encoder.layer.6.ffn_norm._beta", "timeMs" : 1.96331, "averageMs" : 0.00196134, "percentage" : 0.0624442 }
+, { "name" : "model.transformer.encoder.layer.6.ffn_norm.", "timeMs" : 8.22034, "averageMs" : 0.00821213, "percentage" : 0.261453 }
+, { "name" : "317_nn.Linear", "timeMs" : 24.0203, "averageMs" : 0.0239963, "percentage" : 0.763981 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 318) [Constant], (Unnamed Layer* 323) [ElementWise]), PWN((Unnamed Layer* 319) [Constant], (Unnamed Layer* 324) [ElementWise])), (Unnamed Layer* 325) [ElementWise]), PWN((Unnamed Layer* 320) [Constant], (Unnamed Layer* 326) [ElementWise])), (Unnamed Layer* 327) [Activation]), PWN((Unnamed Layer* 321) [Constant], (Unnamed Layer* 328) [ElementWise])), PWN((Unnamed Layer* 322) [Constant], (Unnamed Layer* 329) [ElementWise])), 331_nn.GELU)", "timeMs" : 7.04851, "averageMs" : 0.00704147, "percentage" : 0.224183 }
+, { "name" : "333_nn.Linear", "timeMs" : 24.565, "averageMs" : 0.0245405, "percentage" : 0.781307 }
+, { "name" : "335_elementwise.sum", "timeMs" : 6.21973, "averageMs" : 0.00621351, "percentage" : 0.197823 }
+, { "name" : "model.transformer.encoder.layer.7.attention_norm._gamma", "timeMs" : 1.99595, "averageMs" : 0.00199395, "percentage" : 0.0634824 }
+, { "name" : "model.transformer.encoder.layer.7.attention_norm._beta", "timeMs" : 1.90772, "averageMs" : 0.00190582, "percentage" : 0.0606763 }
+, { "name" : "model.transformer.encoder.layer.7.attention_norm.", "timeMs" : 8.07698, "averageMs" : 0.00806891, "percentage" : 0.256894 }
+, { "name" : "348_nn.Linear || 340_nn.Linear || 344_nn.Linear", "timeMs" : 16.4941, "averageMs" : 0.0164776, "percentage" : 0.524605 }
+, { "name" : "349_nn.Linear_after_reshape", "timeMs" : 6.08398, "averageMs" : 0.00607791, "percentage" : 0.193505 }
+, { "name" : "350_trt.Shuffle.att_v_view_and transpose", "timeMs" : 5.91335, "averageMs" : 0.00590744, "percentage" : 0.188078 }
+, { "name" : "341_nn.Linear_after_reshape", "timeMs" : 5.86621, "averageMs" : 0.00586035, "percentage" : 0.186579 }
+, { "name" : "342_trt.Shuffle.att_q_view_transpose", "timeMs" : 5.80592, "averageMs" : 0.00580012, "percentage" : 0.184661 }
+, { "name" : "345_nn.Linear_after_reshape", "timeMs" : 5.86762, "averageMs" : 0.00586175, "percentage" : 0.186623 }
+, { "name" : "346_trt.Shuffle.att_k_view_and transpose", "timeMs" : 7.17683, "averageMs" : 0.00716966, "percentage" : 0.228264 }
+, { "name" : "351_torch.matmul.q_mul_k", "timeMs" : 13.5773, "averageMs" : 0.0135637, "percentage" : 0.431835 }
+, { "name" : "353_nn.Softmax[dim=4]", "timeMs" : 12.051, "averageMs" : 0.0120389, "percentage" : 0.383289 }
+, { "name" : "354_torch.matmul.matmul(p_attn, value)", "timeMs" : 17.5163, "averageMs" : 0.0174988, "percentage" : 0.557118 }
+, { "name" : "355_trt.Shuffle.attn_transpose_and_reshape", "timeMs" : 5.76352, "averageMs" : 0.00575776, "percentage" : 0.183313 }
+, { "name" : "357_nn.Linear", "timeMs" : 12.0126, "averageMs" : 0.0120006, "percentage" : 0.382067 }
+, { "name" : "359_elementwise.sum", "timeMs" : 5.78413, "averageMs" : 0.00577835, "percentage" : 0.183968 }
+, { "name" : "model.transformer.encoder.layer.7.ffn_norm._gamma", "timeMs" : 2.01793, "averageMs" : 0.00201591, "percentage" : 0.0641816 }
+, { "name" : "model.transformer.encoder.layer.7.ffn_norm._beta", "timeMs" : 2.00775, "averageMs" : 0.00200575, "percentage" : 0.063858 }
+, { "name" : "model.transformer.encoder.layer.7.ffn_norm.", "timeMs" : 8.22136, "averageMs" : 0.00821315, "percentage" : 0.261486 }
+, { "name" : "364_nn.Linear", "timeMs" : 24.0391, "averageMs" : 0.0240151, "percentage" : 0.764579 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 365) [Constant], (Unnamed Layer* 370) [ElementWise]), PWN((Unnamed Layer* 366) [Constant], (Unnamed Layer* 371) [ElementWise])), (Unnamed Layer* 372) [ElementWise]), PWN((Unnamed Layer* 367) [Constant], (Unnamed Layer* 373) [ElementWise])), (Unnamed Layer* 374) [Activation]), PWN((Unnamed Layer* 368) [Constant], (Unnamed Layer* 375) [ElementWise])), PWN((Unnamed Layer* 369) [Constant], (Unnamed Layer* 376) [ElementWise])), 378_nn.GELU)", "timeMs" : 6.96275, "averageMs" : 0.0069558, "percentage" : 0.221455 }
+, { "name" : "380_nn.Linear", "timeMs" : 24.8504, "averageMs" : 0.0248256, "percentage" : 0.790384 }
+, { "name" : "382_elementwise.sum", "timeMs" : 5.87111, "averageMs" : 0.00586525, "percentage" : 0.186735 }
+, { "name" : "model.transformer.encoder.layer.8.attention_norm._gamma", "timeMs" : 2.03649, "averageMs" : 0.00203446, "percentage" : 0.0647719 }
+, { "name" : "model.transformer.encoder.layer.8.attention_norm._beta", "timeMs" : 1.85345, "averageMs" : 0.0018516, "percentage" : 0.0589502 }
+, { "name" : "model.transformer.encoder.layer.8.attention_norm.", "timeMs" : 8.21801, "averageMs" : 0.0082098, "percentage" : 0.261379 }
+, { "name" : "395_nn.Linear || 387_nn.Linear || 391_nn.Linear", "timeMs" : 16.1819, "averageMs" : 0.0161657, "percentage" : 0.514676 }
+, { "name" : "396_nn.Linear_after_reshape", "timeMs" : 6.1029, "averageMs" : 0.0060968, "percentage" : 0.194107 }
+, { "name" : "397_trt.Shuffle.att_v_view_and transpose", "timeMs" : 5.94631, "averageMs" : 0.00594037, "percentage" : 0.189126 }
+, { "name" : "388_nn.Linear_after_reshape", "timeMs" : 5.92026, "averageMs" : 0.00591434, "percentage" : 0.188298 }
+, { "name" : "389_trt.Shuffle.att_q_view_transpose", "timeMs" : 5.77299, "averageMs" : 0.00576722, "percentage" : 0.183614 }
+, { "name" : "392_nn.Linear_after_reshape", "timeMs" : 5.86307, "averageMs" : 0.00585721, "percentage" : 0.186479 }
+, { "name" : "393_trt.Shuffle.att_k_view_and transpose", "timeMs" : 7.14477, "averageMs" : 0.00713763, "percentage" : 0.227244 }
+, { "name" : "398_torch.matmul.q_mul_k", "timeMs" : 13.7352, "averageMs" : 0.0137215, "percentage" : 0.436856 }
+, { "name" : "400_nn.Softmax[dim=4]", "timeMs" : 12.036, "averageMs" : 0.0120239, "percentage" : 0.382812 }
+, { "name" : "401_torch.matmul.matmul(p_attn, value)", "timeMs" : 17.4049, "averageMs" : 0.0173875, "percentage" : 0.553574 }
+, { "name" : "402_trt.Shuffle.attn_transpose_and_reshape", "timeMs" : 5.76883, "averageMs" : 0.00576307, "percentage" : 0.183482 }
+, { "name" : "404_nn.Linear", "timeMs" : 12.0361, "averageMs" : 0.0120241, "percentage" : 0.382816 }
+, { "name" : "406_elementwise.sum", "timeMs" : 5.76851, "averageMs" : 0.00576275, "percentage" : 0.183471 }
+, { "name" : "model.transformer.encoder.layer.8.ffn_norm._gamma", "timeMs" : 1.93182, "averageMs" : 0.00192989, "percentage" : 0.0614427 }
+, { "name" : "model.transformer.encoder.layer.8.ffn_norm._beta", "timeMs" : 2.00078, "averageMs" : 0.00199878, "percentage" : 0.0636361 }
+, { "name" : "model.transformer.encoder.layer.8.ffn_norm.", "timeMs" : 8.18303, "averageMs" : 0.00817485, "percentage" : 0.260267 }
+, { "name" : "411_nn.Linear", "timeMs" : 24.0391, "averageMs" : 0.0240151, "percentage" : 0.764579 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 412) [Constant], (Unnamed Layer* 417) [ElementWise]), PWN((Unnamed Layer* 413) [Constant], (Unnamed Layer* 418) [ElementWise])), (Unnamed Layer* 419) [ElementWise]), PWN((Unnamed Layer* 414) [Constant], (Unnamed Layer* 420) [ElementWise])), (Unnamed Layer* 421) [Activation]), PWN((Unnamed Layer* 415) [Constant], (Unnamed Layer* 422) [ElementWise])), PWN((Unnamed Layer* 416) [Constant], (Unnamed Layer* 423) [ElementWise])), 425_nn.GELU)", "timeMs" : 7.02224, "averageMs" : 0.00701523, "percentage" : 0.223347 }
+, { "name" : "427_nn.Linear", "timeMs" : 24.6785, "averageMs" : 0.0246538, "percentage" : 0.784915 }
+, { "name" : "429_elementwise.sum", "timeMs" : 6.08785, "averageMs" : 0.00608177, "percentage" : 0.193628 }
+, { "name" : "model.transformer.encoder.layer.9.attention_norm._gamma", "timeMs" : 2.01748, "averageMs" : 0.00201547, "percentage" : 0.0641674 }
+, { "name" : "model.transformer.encoder.layer.9.attention_norm._beta", "timeMs" : 1.88839, "averageMs" : 0.00188651, "percentage" : 0.0600616 }
+, { "name" : "model.transformer.encoder.layer.9.attention_norm.", "timeMs" : 8.00641, "averageMs" : 0.00799841, "percentage" : 0.254649 }
+, { "name" : "442_nn.Linear || 434_nn.Linear || 438_nn.Linear", "timeMs" : 16.2161, "averageMs" : 0.0161999, "percentage" : 0.515763 }
+, { "name" : "443_nn.Linear_after_reshape", "timeMs" : 6.07391, "averageMs" : 0.00606784, "percentage" : 0.193185 }
+, { "name" : "444_trt.Shuffle.att_v_view_and transpose", "timeMs" : 5.90327, "averageMs" : 0.00589737, "percentage" : 0.187757 }
+, { "name" : "435_nn.Linear_after_reshape", "timeMs" : 5.89939, "averageMs" : 0.0058935, "percentage" : 0.187634 }
+, { "name" : "436_trt.Shuffle.att_q_view_transpose", "timeMs" : 5.74825, "averageMs" : 0.00574251, "percentage" : 0.182827 }
+, { "name" : "439_nn.Linear_after_reshape", "timeMs" : 5.87472, "averageMs" : 0.00586885, "percentage" : 0.186849 }
+, { "name" : "440_trt.Shuffle.att_k_view_and transpose", "timeMs" : 7.16883, "averageMs" : 0.00716167, "percentage" : 0.228009 }
+, { "name" : "445_torch.matmul.q_mul_k", "timeMs" : 13.5352, "averageMs" : 0.0135217, "percentage" : 0.430497 }
+, { "name" : "447_nn.Softmax[dim=4]", "timeMs" : 12.0601, "averageMs" : 0.012048, "percentage" : 0.383579 }
+, { "name" : "448_torch.matmul.matmul(p_attn, value)", "timeMs" : 17.4556, "averageMs" : 0.0174382, "percentage" : 0.555188 }
+, { "name" : "449_trt.Shuffle.attn_transpose_and_reshape", "timeMs" : 5.81254, "averageMs" : 0.00580674, "percentage" : 0.184872 }
+, { "name" : "451_nn.Linear", "timeMs" : 12.0546, "averageMs" : 0.0120426, "percentage" : 0.383405 }
+, { "name" : "453_elementwise.sum", "timeMs" : 5.73827, "averageMs" : 0.00573254, "percentage" : 0.18251 }
+, { "name" : "model.transformer.encoder.layer.9.ffn_norm._gamma", "timeMs" : 1.97777, "averageMs" : 0.00197579, "percentage" : 0.0629043 }
+, { "name" : "model.transformer.encoder.layer.9.ffn_norm._beta", "timeMs" : 1.94859, "averageMs" : 0.00194664, "percentage" : 0.0619761 }
+, { "name" : "model.transformer.encoder.layer.9.ffn_norm.", "timeMs" : 8.27269, "averageMs" : 0.00826443, "percentage" : 0.263119 }
+, { "name" : "458_nn.Linear", "timeMs" : 24.0645, "averageMs" : 0.0240405, "percentage" : 0.765387 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 459) [Constant], (Unnamed Layer* 464) [ElementWise]), PWN((Unnamed Layer* 460) [Constant], (Unnamed Layer* 465) [ElementWise])), (Unnamed Layer* 466) [ElementWise]), PWN((Unnamed Layer* 461) [Constant], (Unnamed Layer* 467) [ElementWise])), (Unnamed Layer* 468) [Activation]), PWN((Unnamed Layer* 462) [Constant], (Unnamed Layer* 469) [ElementWise])), PWN((Unnamed Layer* 463) [Constant], (Unnamed Layer* 470) [ElementWise])), 472_nn.GELU)", "timeMs" : 6.92525, "averageMs" : 0.00691833, "percentage" : 0.220262 }
+, { "name" : "474_nn.Linear", "timeMs" : 25.2297, "averageMs" : 0.0252045, "percentage" : 0.802446 }
+, { "name" : "476_elementwise.sum", "timeMs" : 6.18204, "averageMs" : 0.00617586, "percentage" : 0.196624 }
+, { "name" : "model.transformer.encoder.layer.10.attention_norm._gamma", "timeMs" : 2.01569, "averageMs" : 0.00201368, "percentage" : 0.0641103 }
+, { "name" : "model.transformer.encoder.layer.10.attention_norm._beta", "timeMs" : 2.85185, "averageMs" : 0.002849, "percentage" : 0.090705 }
+, { "name" : "model.transformer.encoder.layer.10.attention_norm.", "timeMs" : 8.43932, "averageMs" : 0.00843089, "percentage" : 0.268418 }
+, { "name" : "489_nn.Linear || 481_nn.Linear || 485_nn.Linear", "timeMs" : 16.1538, "averageMs" : 0.0161377, "percentage" : 0.513783 }
+, { "name" : "490_nn.Linear_after_reshape", "timeMs" : 6.10792, "averageMs" : 0.00610182, "percentage" : 0.194267 }
+, { "name" : "491_trt.Shuffle.att_v_view_and transpose", "timeMs" : 5.84727, "averageMs" : 0.00584143, "percentage" : 0.185976 }
+, { "name" : "482_nn.Linear_after_reshape", "timeMs" : 5.80621, "averageMs" : 0.00580041, "percentage" : 0.18467 }
+, { "name" : "483_trt.Shuffle.att_q_view_transpose", "timeMs" : 5.81316, "averageMs" : 0.00580735, "percentage" : 0.184891 }
+, { "name" : "486_nn.Linear_after_reshape", "timeMs" : 5.81555, "averageMs" : 0.00580974, "percentage" : 0.184967 }
+, { "name" : "487_trt.Shuffle.att_k_view_and transpose", "timeMs" : 7.20067, "averageMs" : 0.00719348, "percentage" : 0.229022 }
+, { "name" : "492_torch.matmul.q_mul_k", "timeMs" : 13.5517, "averageMs" : 0.0135382, "percentage" : 0.431022 }
+, { "name" : "494_nn.Softmax[dim=4]", "timeMs" : 11.9845, "averageMs" : 0.0119725, "percentage" : 0.381175 }
+, { "name" : "495_torch.matmul.matmul(p_attn, value)", "timeMs" : 17.4309, "averageMs" : 0.0174135, "percentage" : 0.554401 }
+, { "name" : "496_trt.Shuffle.attn_transpose_and_reshape", "timeMs" : 5.75737, "averageMs" : 0.00575162, "percentage" : 0.183117 }
+, { "name" : "498_nn.Linear", "timeMs" : 12.0541, "averageMs" : 0.012042, "percentage" : 0.383388 }
+, { "name" : "500_elementwise.sum", "timeMs" : 5.78055, "averageMs" : 0.00577477, "percentage" : 0.183854 }
+, { "name" : "model.transformer.encoder.layer.10.ffn_norm._gamma", "timeMs" : 1.97985, "averageMs" : 0.00197787, "percentage" : 0.0629704 }
+, { "name" : "model.transformer.encoder.layer.10.ffn_norm._beta", "timeMs" : 1.97025, "averageMs" : 0.00196828, "percentage" : 0.0626651 }
+, { "name" : "model.transformer.encoder.layer.10.ffn_norm.", "timeMs" : 8.19858, "averageMs" : 0.00819039, "percentage" : 0.260761 }
+, { "name" : "505_nn.Linear", "timeMs" : 23.9798, "averageMs" : 0.0239559, "percentage" : 0.762695 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 506) [Constant], (Unnamed Layer* 511) [ElementWise]), PWN((Unnamed Layer* 507) [Constant], (Unnamed Layer* 512) [ElementWise])), (Unnamed Layer* 513) [ElementWise]), PWN((Unnamed Layer* 508) [Constant], (Unnamed Layer* 514) [ElementWise])), (Unnamed Layer* 515) [Activation]), PWN((Unnamed Layer* 509) [Constant], (Unnamed Layer* 516) [ElementWise])), PWN((Unnamed Layer* 510) [Constant], (Unnamed Layer* 517) [ElementWise])), 519_nn.GELU)", "timeMs" : 7.08973, "averageMs" : 0.00708264, "percentage" : 0.225493 }
+, { "name" : "521_nn.Linear", "timeMs" : 24.3291, "averageMs" : 0.0243048, "percentage" : 0.773804 }
+, { "name" : "523_elementwise.sum", "timeMs" : 6.21045, "averageMs" : 0.00620424, "percentage" : 0.197527 }
+, { "name" : "model.transformer.encoder.layer.11.attention_norm._gamma", "timeMs" : 2.03387, "averageMs" : 0.00203183, "percentage" : 0.0646884 }
+, { "name" : "model.transformer.encoder.layer.11.attention_norm._beta", "timeMs" : 1.87905, "averageMs" : 0.00187717, "percentage" : 0.0597644 }
+, { "name" : "model.transformer.encoder.layer.11.attention_norm.", "timeMs" : 8.16703, "averageMs" : 0.00815887, "percentage" : 0.259758 }
+, { "name" : "536_nn.Linear || 528_nn.Linear || 532_nn.Linear", "timeMs" : 16.4488, "averageMs" : 0.0164324, "percentage" : 0.523165 }
+, { "name" : "537_nn.Linear_after_reshape", "timeMs" : 6.15535, "averageMs" : 0.0061492, "percentage" : 0.195775 }
+, { "name" : "538_trt.Shuffle.att_v_view_and transpose", "timeMs" : 5.96692, "averageMs" : 0.00596096, "percentage" : 0.189782 }
+, { "name" : "529_nn.Linear_after_reshape", "timeMs" : 5.84163, "averageMs" : 0.0058358, "percentage" : 0.185797 }
+, { "name" : "530_trt.Shuffle.att_q_view_transpose", "timeMs" : 5.76707, "averageMs" : 0.00576131, "percentage" : 0.183426 }
+, { "name" : "533_nn.Linear_after_reshape", "timeMs" : 5.86659, "averageMs" : 0.00586073, "percentage" : 0.186591 }
+, { "name" : "534_trt.Shuffle.att_k_view_and transpose", "timeMs" : 7.28659, "averageMs" : 0.00727931, "percentage" : 0.231755 }
+, { "name" : "539_torch.matmul.q_mul_k", "timeMs" : 13.5404, "averageMs" : 0.0135269, "percentage" : 0.430663 }
+, { "name" : "541_nn.Softmax[dim=4]", "timeMs" : 12.0323, "averageMs" : 0.0120203, "percentage" : 0.382695 }
+, { "name" : "542_torch.matmul.matmul(p_attn, value)", "timeMs" : 17.4545, "averageMs" : 0.017437, "percentage" : 0.555151 }
+, { "name" : "543_trt.Shuffle.attn_transpose_and_reshape", "timeMs" : 5.7752, "averageMs" : 0.00576943, "percentage" : 0.183684 }
+, { "name" : "545_nn.Linear", "timeMs" : 12.0587, "averageMs" : 0.0120466, "percentage" : 0.383534 }
+, { "name" : "547_elementwise.sum", "timeMs" : 5.84657, "averageMs" : 0.00584073, "percentage" : 0.185954 }
+, { "name" : "model.transformer.encoder.layer.11.ffn_norm._gamma", "timeMs" : 1.96388, "averageMs" : 0.00196192, "percentage" : 0.0624625 }
+, { "name" : "model.transformer.encoder.layer.11.ffn_norm._beta", "timeMs" : 2.02452, "averageMs" : 0.0020225, "percentage" : 0.0643913 }
+, { "name" : "model.transformer.encoder.layer.11.ffn_norm.", "timeMs" : 8.10398, "averageMs" : 0.00809589, "percentage" : 0.257753 }
+, { "name" : "552_nn.Linear", "timeMs" : 23.9947, "averageMs" : 0.0239707, "percentage" : 0.763168 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 553) [Constant], (Unnamed Layer* 558) [ElementWise]), PWN((Unnamed Layer* 554) [Constant], (Unnamed Layer* 559) [ElementWise])), (Unnamed Layer* 560) [ElementWise]), PWN((Unnamed Layer* 555) [Constant], (Unnamed Layer* 561) [ElementWise])), (Unnamed Layer* 562) [Activation]), PWN((Unnamed Layer* 556) [Constant], (Unnamed Layer* 563) [ElementWise])), PWN((Unnamed Layer* 557) [Constant], (Unnamed Layer* 564) [ElementWise])), 566_nn.GELU)", "timeMs" : 8.28518, "averageMs" : 0.00827691, "percentage" : 0.263516 }
+, { "name" : "568_nn.Linear", "timeMs" : 25.134, "averageMs" : 0.0251089, "percentage" : 0.799405 }
+, { "name" : "570_elementwise.sum", "timeMs" : 5.86183, "averageMs" : 0.00585597, "percentage" : 0.186439 }
+, { "name" : "model.transformer.encoder.encoder_norm._gamma", "timeMs" : 2.05809, "averageMs" : 0.00205603, "percentage" : 0.0654589 }
+, { "name" : "model.transformer.encoder.encoder_norm._beta", "timeMs" : 1.89236, "averageMs" : 0.00189047, "percentage" : 0.0601878 }
+, { "name" : "model.transformer.encoder.encoder_norm.", "timeMs" : 8.41561, "averageMs" : 0.0084072, "percentage" : 0.267664 }
+, { "name" : "574_tensor.slice", "timeMs" : 5.0093, "averageMs" : 0.0050043, "percentage" : 0.159324 }
+, { "name" : "576_nn.Linear", "timeMs" : 9.78074, "averageMs" : 0.00977097, "percentage" : 0.311083 }
+]

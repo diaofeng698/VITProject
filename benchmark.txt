@@ -1,0 +1,112 @@
+# KPI
+ONNX
+final acc = 94.66%
+TensorRT
+No Plugin
+Final accuracy = 94.66%
+With Plugin
+Final accuracy = 94.67%
+FP16 Plugin
+Final accuracy = 94.67%
+INT8 Plugin
+Final accuracy = 94.68%
+
+
+
+
+Runtime Benchmarking
+
+LayerNorm Plugin
+trtexec --loadEngine=model_plugin.plan --shapes=input:1*1*224*224 --plugins=liblayernorm_plugin.so --iterations=1000 --exportProfile=profile_plugin.json
+
+[01/27/2026-03:57:16] [I] Host Latency
+[01/27/2026-03:57:16] [I] min: 3.6062 ms (end to end 3.61206 ms)
+[01/27/2026-03:57:16] [I] max: 5.75244 ms (end to end 5.75879 ms)
+[01/27/2026-03:57:16] [I] mean: 3.71145 ms (end to end 3.71936 ms)
+[01/27/2026-03:57:16] [I] median: 3.6665 ms (end to end 3.67389 ms)
+[01/27/2026-03:57:16] [I] percentile: 5.14868 ms at 99% (end to end 5.16162 ms at 99%)
+[01/27/2026-03:57:16] [I] throughput: 0 qps
+[01/27/2026-03:57:16] [I] walltime: 3.72649 s
+[01/27/2026-03:57:16] [I] Enqueue Time
+[01/27/2026-03:57:16] [I] min: 3.59106 ms
+[01/27/2026-03:57:16] [I] max: 5.74146 ms
+[01/27/2026-03:57:16] [I] median: 3.65527 ms
+[01/27/2026-03:57:16] [I] GPU Compute
+[01/27/2026-03:57:16] [I] min: 3.54712 ms
+[01/27/2026-03:57:16] [I] max: 5.6936 ms
+[01/27/2026-03:57:16] [I] mean: 3.65169 ms
+[01/27/2026-03:57:16] [I] median: 3.60742 ms
+[01/27/2026-03:57:16] [I] percentile: 5.07703 ms at 99%
+[01/27/2026-03:57:16] [I] total compute time: 3.65169 s
+
+No Plugin
+trtexec --loadEngine=model.plan --shapes=input:1*1*224*224 --iterations=1000 --exportProfile=profile.json
+
+[01/27/2026-03:58:02] [I] Host Latency
+[01/27/2026-03:58:02] [I] min: 4.58789 ms (end to end 4.59521 ms)
+[01/27/2026-03:58:02] [I] max: 14.4126 ms (end to end 14.4182 ms)
+[01/27/2026-03:58:02] [I] mean: 4.82152 ms (end to end 4.83001 ms)
+[01/27/2026-03:58:02] [I] median: 4.67331 ms (end to end 4.68127 ms)
+[01/27/2026-03:58:02] [I] percentile: 7.71094 ms at 99% (end to end 7.72412 ms at 99%)
+[01/27/2026-03:58:02] [I] throughput: 0 qps
+[01/27/2026-03:58:02] [I] walltime: 4.83774 s
+[01/27/2026-03:58:02] [I] Enqueue Time
+[01/27/2026-03:58:02] [I] min: 4.57764 ms
+[01/27/2026-03:58:02] [I] max: 14.3977 ms
+[01/27/2026-03:58:02] [I] median: 4.66211 ms
+[01/27/2026-03:58:02] [I] GPU Compute
+[01/27/2026-03:58:02] [I] min: 4.52881 ms
+[01/27/2026-03:58:02] [I] max: 14.3523 ms
+[01/27/2026-03:58:02] [I] mean: 4.76182 ms
+[01/27/2026-03:58:02] [I] median: 4.61414 ms
+[01/27/2026-03:58:02] [I] percentile: 7.63916 ms at 99%
+[01/27/2026-03:58:02] [I] total compute time: 4.76182 s
+
+
+FP16 Plugin
+trtexec --loadEngine=model_fp16.plan --shapes=input:1*1*224*224 --plugins=liblayernorm_plugin.so --iterations=1000 --exportProfile=profile_plugin.json
+
+[01/27/2026-05:25:51] [I] Host Latency
+[01/27/2026-05:25:51] [I] min: 2.61188 ms (end to end 2.62109 ms)
+[01/27/2026-05:25:51] [I] max: 7.94946 ms (end to end 7.95679 ms)
+[01/27/2026-05:25:51] [I] mean: 2.70145 ms (end to end 2.7108 ms)
+[01/27/2026-05:25:51] [I] median: 2.63898 ms (end to end 2.64825 ms)
+[01/27/2026-05:25:51] [I] percentile: 4.79517 ms at 99% (end to end 4.80566 ms at 99%)
+[01/27/2026-05:25:51] [I] throughput: 0 qps
+[01/27/2026-05:25:51] [I] walltime: 2.71843 s
+[01/27/2026-05:25:51] [I] Enqueue Time
+[01/27/2026-05:25:51] [I] min: 2.5885 ms
+[01/27/2026-05:25:51] [I] max: 7.9231 ms
+[01/27/2026-05:25:51] [I] median: 2.62604 ms
+[01/27/2026-05:25:51] [I] GPU Compute
+[01/27/2026-05:25:51] [I] min: 2.55072 ms
+[01/27/2026-05:25:51] [I] max: 7.87964 ms
+[01/27/2026-05:25:51] [I] mean: 2.64115 ms
+[01/27/2026-05:25:51] [I] median: 2.57935 ms
+[01/27/2026-05:25:51] [I] percentile: 4.70117 ms at 99%
+[01/27/2026-05:25:51] [I] total compute time: 2.64115 s
+
+
+INT8 Plugin
+trtexec --loadEngine=model_int8.plan --shapes=input:1*1*224*224 --plugins=liblayernorm_plugin.so --iterations=1000 --exportProfile=profile_plugin.json
+
+[01/27/2026-06:34:10] [I] Host Latency
+[01/27/2026-06:34:10] [I] min: 2.78564 ms (end to end 2.79614 ms)
+[01/27/2026-06:34:10] [I] max: 11.1946 ms (end to end 11.2082 ms)
+[01/27/2026-06:34:10] [I] mean: 2.896 ms (end to end 2.90343 ms)
+[01/27/2026-06:34:10] [I] median: 2.81982 ms (end to end 2.82715 ms)
+[01/27/2026-06:34:10] [I] percentile: 5.62262 ms at 99% (end to end 5.63251 ms at 99%)
+[01/27/2026-06:34:10] [I] throughput: 0 qps
+[01/27/2026-06:34:10] [I] walltime: 3.00697 s
+[01/27/2026-06:34:10] [I] Enqueue Time
+[01/27/2026-06:34:10] [I] min: 2.77588 ms
+[01/27/2026-06:34:10] [I] max: 11.1564 ms
+[01/27/2026-06:34:10] [I] median: 2.80646 ms
+[01/27/2026-06:34:10] [I] GPU Compute
+[01/27/2026-06:34:10] [I] min: 2.72485 ms
+[01/27/2026-06:34:10] [I] max: 11.1153 ms
+[01/27/2026-06:34:10] [I] mean: 2.83547 ms
+[01/27/2026-06:34:10] [I] median: 2.75977 ms
+[01/27/2026-06:34:10] [I] percentile: 5.55005 ms at 99%
+[01/27/2026-06:34:10] [I] total compute time: 2.92904 s
+
